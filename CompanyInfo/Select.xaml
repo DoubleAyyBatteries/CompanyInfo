@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window
+    x:Class="CompanyInfo.Select"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CompanyInfo"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="CompanyInfo">
+
+    <Window.SystemBackdrop>
+        <MicaBackdrop />
+    </Window.SystemBackdrop>
+
+    <Grid>
+        <ListView ItemsSource="{x:Bind UsersTable.DefaultView}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal"
+                                Spacing="20">
+                        <TextBlock Text="{Binding [emp_id]}"
+                                   Width="50" />
+                        <TextBlock Text="{Binding [emp_first_name]}"
+                                   Width="200" />
+                        <TextBlock Text="{Binding [emp_last_name]}"
+                                   Width="200" />
+                        <TextBlock Text="{Binding [dep_name]}"
+                                   Width="200" />
+                        <TextBlock Text="{Binding [sal_m_curr]}"
+                                   Width="150" />
+                        <TextBlock Text="{Binding [sal_m_lm]}"
+                                   Width="150" />
+                        <TextBlock Text="{Binding [sal_m_2m]}"
+                                   Width="150" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</Window>

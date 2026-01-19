@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window
+    x:Class="CompanyInfo.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CompanyInfo"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="CompanyInfo">
+
+    <Window.SystemBackdrop>
+        <MicaBackdrop />
+    </Window.SystemBackdrop>
+
+    <Grid>
+        <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Spacing="20">
+
+            <Button x:Name="Insert"
+                    Click="Insert_Click">
+                Add Department/Employee
+            </Button>
+
+            <Button x:Name="Delete"
+                    Click="Delete_Click">
+                Delete Department/Employee
+            </Button>
+
+            <TextBlock Width="100"
+                       Text="Please Choose an Option"
+                       TextAlignment="Center"
+                       TextWrapping="Wrap">
+            </TextBlock>
+
+            <Button x:Name="Update"
+                    Click="Update_Click">
+                Update Department/Employee
+            </Button>
+
+            <Button x:Name="Select"
+                    Click="Select_Click">
+                Show Data
+            </Button>
+
+        </StackPanel>
+    </Grid>
+</Window>
